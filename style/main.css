@@ -1,0 +1,109 @@
+/*cria variáveis de cor para serem usadas*/
+:root{
+    --vermelho: #E50914;
+    --preto: #141414;
+}
+
+/*resete do css*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+/*ELEMENTOS BASE*/
+body{
+    background: var(--preto); /*colocando a cor do site com o valor da variável preta criada no root*/
+    font-family: 'Arial', Times, serif;
+    color: white;
+}
+
+header .container{ /*aplicação do flexbox (alinhar os elementos em tela)*/
+    display: flex;
+    flex-direction: row; /*propriedade default (coloca se quiser)*/
+    align-items: center; /*centraliza os itens verticalmente na tela*/
+    justify-content: space-between; /*centraliza os itens com distancia equivalente entre os elementos do box*/
+}
+
+header .logo{
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+}
+
+header nav a{
+    text-decoration: none; /*retira a linha das palavras*/
+    color: #aaa; /*cor das letras dos menus nav*/
+    margin-right: 10px;
+}
+
+header nav a:hover{ /*coloca uma cor diferente ao passar o mouse pelo nav bar*/
+    color:#fff;
+}
+
+/*FILME PRINCIPAL*/
+.filme-principal{
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('/img/cobrakai-img.jpg'); /*carrega imagem como background || O linear gradiente adciona uma fina camada de cor para ressaltar as letras*/   
+    
+    height: 400px;
+    background-size: cover; /*faz a imagem pegar a área de cobertura da caixa*/
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.filme-principal .descricao{ /*abaixando os botoes*/
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.filme-principal .titulo{
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.botao{
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color:white;
+
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+
+    cursor:pointer; /*muda o ponteiro do mouse para uma mãozinha ao passar por cima do botao*/
+    transition: .3s ease all; /*cria uma transição na mudança de cor dos botoes ao passar o mouse por cima*/
+}
+
+.botao:hover{
+    background-color: white;
+    color: black;
+}
+
+.botao i{
+    margin-right: 8px;
+}
+
+.container{
+    margin-left: 20px;
+}
+
+.filme-principal .container{
+    width: 70%;
+}
+
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrosel-filmes{
+    margin-top: 10px;
+}
